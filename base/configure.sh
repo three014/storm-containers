@@ -1,7 +1,5 @@
 #!/bin/sh
 
-#maybe need to add nimbus host as localhost
-
 mkdir /home/cc/storm/data
 
 cat >> /home/cc/storm/conf/storm.yaml <<EOF
