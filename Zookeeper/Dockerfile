@@ -6,10 +6,16 @@ RUN apt-get install openjdk-8-jre-headless -y
 
 RUN mkdir -p /home/cc
 
-ADD start.sh /
-
 ADD zookeeper /home/cc/zookeeper
 
-WORKDIR /home/cc/zookeeper
+WORKDIR /home/cc/zookeeper/bin
 
-ENTRYPOINT ["start.sh"]
+EXPOSE 2181
+
+ADD start.sh /
+
+RUN chmod +x /start.sh
+
+CMD ["/start.sh"]
+
+ENTRYPOINT ["tail", "-f", "/dev/null"]
