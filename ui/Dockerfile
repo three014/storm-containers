@@ -1,4 +1,5 @@
-FROM wclif/storm-base:latest
+ARG USERNAME=
+FROM ${USERNAME}/storm-base:latest
 
 ADD start.sh /
 

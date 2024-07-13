@@ -1,4 +1,5 @@
-FROM ubuntu:20.04
+ARG ARCH=
+FROM ${ARCH}ubuntu:20.04
 
 MAINTAINER Peng Kang<123kangpeng@gmail.edu>
 
